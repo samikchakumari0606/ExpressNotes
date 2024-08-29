@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<body>
+
+    <%- include('common/header') %>
+    
+    <h1>This is my profile page from
+        view folder of templete engine</h1>
+
+    <h3>Welcome <%= user.myname %> </h3>   
+    <h3>Your email is <%= user.email %> </h3>   
+    <h3>Your city is  <%= user.city %> </h3>  
+    
+    <ul>
+        <% user.skills.forEach((item)=>{%>
+           <li><%= item %></li>
+       <% })%>
+    </ul>
+</body>
+</html>
